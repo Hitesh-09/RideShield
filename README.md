@@ -59,7 +59,7 @@ On the admin side, the system also shows exposure by zone, claims triggered, sus
 
 ## Weekly premium model
 
-We did not want pricing to feel like fake “insurance math.” The brief is clear that pricing should be weekly, and that actually makes sense for this audience. Food delivery riders think in weekly earnings, not annual policy cycles. So the product should too. :contentReference[oaicite:1]{index=1}
+We did not want pricing to feel like fake “insurance math.” The brief is clear that pricing should be weekly, and that actually makes sense for this audience. Food delivery riders think in weekly earnings, not annual policy cycles. So the product should too.
 
 Paramsetu uses a **weekly micro-premium model** with a simple base plan and a risk adjustment layer on top.
 
@@ -133,8 +133,7 @@ This matters because we want the product to feel automated, but not careless.
 
 ### Why parametric works here
 
-This use case is a strong fit for parametric insurance because the source of loss is external and measurable. We are not trying to judge damage after the fact. We are responding to disruption conditions that can be tracked in near real time. That keeps the workflow much cleaner than traditional claims handling. :contentReference[oaicite:2]{index=2}
-
+This use case is a strong fit for parametric insurance because the source of loss is external and measurable. We are not trying to judge damage after the fact. We are responding to disruption conditions that can be tracked in near real time. That keeps the workflow much cleaner than traditional claims handling.
 ## Where AI/ML fits
 
 A lot of hackathon projects say they use AI, but only use it as decoration. We wanted it to sit in parts of the workflow where it actually changes product behavior.
@@ -319,8 +318,7 @@ We are **not** covering:
 - vehicle repair
 - general reimbursement workflows
 
-That boundary is important. It keeps the product coherent and stops it from becoming a vague “insurance app” with too many disconnected use cases. :contentReference[oaicite:3]{index=3}
-
+That boundary is important. It keeps the product coherent and stops it from becoming a vague “insurance app” with too many disconnected use cases.
 ## Team
 
 | Member | Role | Responsibility |
