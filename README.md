@@ -1,8 +1,8 @@
-# ShiftSure
+# Paramsetu
 
-**ShiftSure is a cross-platform mobile app that protects food delivery riders from short-term income loss caused by external disruptions like heavy rain, flooding, extreme heat, severe pollution, and access restrictions.**
+**Paramsetu is a cross-platform mobile app that protects food delivery riders from short-term income loss caused by external disruptions like heavy rain, flooding, extreme heat, severe pollution, and access restrictions.**
 
-We are building this for urban delivery riders who work shift-to-shift and lose real income when the city becomes temporarily undeliverable. Instead of making them file manual claims, ShiftSure uses a parametric model: when disruption conditions cross a defined threshold in the rider’s operating zone, the system automatically evaluates eligibility, runs fraud checks, and simulates payout.
+We are building this for urban delivery riders who work shift-to-shift and lose real income when the city becomes temporarily undeliverable. Instead of making them file manual claims, Paramsetu uses a parametric model: when disruption conditions cross a defined threshold in the rider’s operating zone, the system automatically evaluates eligibility, runs fraud checks, and simulates payout.
 
 The product is intentionally narrow. We are not trying to solve “insurance for everyone.” We are focused on one real use case: **weekly income protection for food delivery riders in high-disruption urban zones**. That focus makes the product easier to trust, easier to price, and much more realistic to build.
 
@@ -28,11 +28,11 @@ This was a deliberate choice. Food delivery is one of the clearest examples of d
 
 **Rahul**, 24, is a delivery rider in Chennai. He usually works two strong earning windows: lunch and evening. On days with heavy rain, flooding, or extreme heat, he may still be “working,” but practically he completes far fewer deliveries. A few bad disruption days in a week can materially cut his income.
 
-ShiftSure is designed for someone like Rahul — not as a general insurance product, but as a focused income continuity tool.
+Paramsetu is designed for someone like Rahul — not as a general insurance product, but as a focused income continuity tool.
 
 ## Our approach
 
-ShiftSure is a **parametric income protection app**.
+Paramsetu is a **parametric income protection app**.
 
 That means we do not wait for the rider to manually prove loss in the traditional sense. Instead, the app monitors predefined disruption signals in the rider’s insured operating zone. If the disruption crosses an agreed threshold, the system automatically checks whether:
 - the rider has an active policy
@@ -47,7 +47,7 @@ This is a much better fit for gig workers than traditional claims-heavy insuranc
 ## How the app works
 
 1. The rider signs up in the mobile app and selects their operating zone.
-2. ShiftSure calculates a weekly risk score using zone-level and disruption-related signals.
+2. Paramsetu calculates a weekly risk score using zone-level and disruption-related signals.
 3. Based on that score, the rider gets a weekly premium and protection plan.
 4. Once the plan is active, the backend keeps monitoring disruption events.
 5. If a valid disruption affects the rider’s zone, the system automatically checks eligibility.
@@ -61,7 +61,7 @@ On the admin side, the system also shows exposure by zone, claims triggered, sus
 
 We did not want pricing to feel like fake “insurance math.” The brief is clear that pricing should be weekly, and that actually makes sense for this audience. Food delivery riders think in weekly earnings, not annual policy cycles. So the product should too. :contentReference[oaicite:1]{index=1}
 
-ShiftSure uses a **weekly micro-premium model** with a simple base plan and a risk adjustment layer on top.
+Paramsetu uses a **weekly micro-premium model** with a simple base plan and a risk adjustment layer on top.
 
 ### Base plans
 
@@ -77,7 +77,7 @@ These are not final actuarial numbers. They are product-facing plan bands that m
 
 The final premium is not flat across the city. A rider operating in a low-disruption zone should not pay the same as a rider working in a flood-prone or heat-heavy area.
 
-So ShiftSure adjusts pricing using a risk score built from:
+So Paramsetu adjusts pricing using a risk score built from:
 - operating zone
 - rainfall severity history
 - flood / waterlogging exposure
@@ -139,7 +139,7 @@ This use case is a strong fit for parametric insurance because the source of los
 
 A lot of hackathon projects say they use AI, but only use it as decoration. We wanted it to sit in parts of the workflow where it actually changes product behavior.
 
-ShiftSure uses AI/ML in three places.
+Paramsetu uses AI/ML in three places.
 
 ### 1. Premium calculation
 
@@ -190,7 +190,7 @@ We are intentionally keeping the ML explainable. For this use case, a clear and 
 
 ## Why mobile, not web
 
-We chose to build ShiftSure as a **cross-platform mobile app** because that is where this product actually belongs.
+We chose to build Paramsetu as a **cross-platform mobile app** because that is where this product actually belongs.
 
 Food delivery riders already work through their phones. Their navigation, shift flow, earnings tracking, order handling, and communication all happen on mobile. Asking them to manage income protection from a desktop-first product would be unnatural.
 
@@ -222,7 +222,7 @@ We picked the stack with one constraint in mind: it should be fast enough for a 
 - GoRouter for navigation
 - Supabase Flutter SDK for auth and data access
 
-Flutter gives us a single codebase for Android and iOS, which matters in a short build window. More importantly, it fits the product well: ShiftSure needs location-aware flows, notification-friendly UX, and a fast mobile onboarding experience.
+Flutter gives us a single codebase for Android and iOS, which matters in a short build window. More importantly, it fits the product well: Paramsetu needs location-aware flows, notification-friendly UX, and a fast mobile onboarding experience.
 
 ### Backend
 - **FastAPI**
@@ -256,7 +256,7 @@ We are deliberately keeping the ML stack practical. We do not need exotic models
 - payout simulation layer
 - location/GPS validation from the app
 
-These integrations are what make the product feel real. The point of ShiftSure is not just to show UI screens — it is to connect app behavior to measurable external conditions.
+These integrations are what make the product feel real. The point of Paramsetu is not just to show UI screens — it is to connect app behavior to measurable external conditions.
 
 ## Development plan
 
@@ -291,7 +291,7 @@ The goal is not to overbuild. The goal is to make sure the product works end-to-
 
 A lot of teams will build something that looks like insurance software. We are trying to build something that feels like it actually belongs in the daily workflow of a delivery rider.
 
-What makes ShiftSure stronger:
+What makes Paramsetu stronger:
 
 ### 1. Narrow scope
 We are not solving for every gig worker. We are solving one sharp problem for one sharp user group.
@@ -310,7 +310,7 @@ AI is used where it changes decisions: pricing, fraud checks, and admin foresigh
 
 ## Scope boundaries
 
-To keep the project disciplined and aligned with the brief, ShiftSure only covers **income loss caused by external disruptions**.
+To keep the project disciplined and aligned with the brief, Paramsetu only covers **income loss caused by external disruptions**.
 
 We are **not** covering:
 - health insurance
@@ -332,7 +332,7 @@ That boundary is important. It keeps the product coherent and stops it from beco
 
 ## Closing note
 
-ShiftSure is our attempt to build something narrow, honest, and actually usable.
+Paramsetu is our attempt to build something narrow, honest, and actually usable.
 
 The core idea is simple: if external disruption is measurable, then short-term income protection for riders should not depend on slow, manual, traditional claims logic. It should be mobile, lightweight, and responsive to real operating conditions.
 
