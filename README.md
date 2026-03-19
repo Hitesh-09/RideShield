@@ -1,6 +1,6 @@
 # Param Setu
 
-**AI-powered parametric insurance for delivery riders facing real-world disruptions.**
+**Demo Video:** [Watch here](https://drive.google.com/drive/folders/1arCwVFGw_CmgI0mQX2kPyofoJNe0fPl4?usp=sharing)
 
 Param Setu is a mobile-first parametric insurance platform built for food delivery riders in Chennai. It protects short-term income when external conditions like heavy rain, flooding, extreme heat, severe pollution, or access restrictions make delivery work temporarily unsafe or impractical.
 
@@ -352,37 +352,6 @@ This keeps the system realistic without requiring production platform APIs.
 
 ---
 
-## Repository structure
-
-```text
-param-setu/
-├── README.md
-├── docs/
-│   ├── architecture.md
-│   ├── api-spec.md
-│   └── demo-flow.md
-├── mobile/
-│   ├── lib/
-│   ├── assets/
-│   └── pubspec.yaml
-├── backend/
-│   ├── app/
-│   │   ├── api/
-│   │   ├── services/
-│   │   ├── models/
-│   │   ├── jobs/
-│   │   └── core/
-│   ├── requirements.txt
-│   └── main.py
-├── ml/
-│   ├── risk_scoring/
-│   ├── fraud_detection/
-│   └── notebooks/
-├── scripts/
-└── .env.example
-
----
-
 ## Dashboard metrics
 
 ### Worker dashboard
@@ -448,61 +417,6 @@ We are treating the build in the same order the product needs to work.
 - prepare demo scenario and final presentation
 
 The goal is not to overbuild. The goal is to make sure the product works end-to-end: onboarding, pricing, trigger detection, claim generation, fraud check, payout simulation.
-
----
-
-## What makes this product different
-
-A lot of teams will build something that looks like insurance software. We are trying to build something that feels like it actually belongs in the daily workflow of a delivery rider.
-
-What makes Param Setu stronger:
-
-### 1. Narrow scope
-
-We are not solving for every gig worker. We are solving one sharp problem for one sharp user group.
-
-### 2. Mobile-first by design
-
-This is not a web dashboard pretending to be useful for riders. The product is designed around the device they already use for work.
-
-### 3. Hyperlocal pricing
-
-We are not using one flat premium across the city. Risk is tied to operating conditions.
-
-### 4. Zero-touch claims
-
-The system is designed to reduce manual effort, which is exactly where traditional insurance fails for this audience.
-
-### 5. Practical AI
-
-AI is used where it changes decisions: pricing, fraud checks, and admin foresight — not as decoration.
-
----
-
-## Scope boundaries
-
-To keep the project disciplined and aligned with the brief, Param Setu only covers income loss caused by external disruptions.
-
-We are not covering:
-
-- health insurance
-- accident claims
-- life insurance
-- vehicle repair
-- general reimbursement workflows
-
-That boundary is important. It keeps the product coherent and stops it from becoming a vague “insurance app” with too many disconnected use cases.
-
----
-
-## Team
-
-| Member | Role | Responsibility |
-|--------|------|----------------|
-| Member 1 | AI / ML Engineer | Risk modeling, premium calculation, fraud detection |
-| Member 2 | Backend Engineer / Team Lead | Insurance workflow, APIs, claim automation, architecture |
-| Member 3 | Frontend Engineer | Rider app, UX, policy and claim flows |
-| Member 4 | Integration & DevOps | External APIs, payout simulation, deployment, demo, presentation |
 
 ---
 
