@@ -198,8 +198,6 @@ A claim becomes eligible only when:
 - the rider is active or available during the affected shift window
 - the fraud score is acceptable
 
-This keeps the platform automated, but not careless.
-
 ---
 
 ## Payout logic
@@ -303,8 +301,6 @@ The admin view can be delivered through a lightweight dashboard.
 ---
 
 ## Tech stack
-
-We chose the stack with one constraint in mind: it should be fast enough for a hackathon, but still credible as a real system.
 
 ### Mobile app
 - Flutter
@@ -415,8 +411,6 @@ We are treating the build in the same order the product needs to work.
 - simulate payout workflow
 - improve rider claim visibility
 - prepare demo scenario and final presentation
-
-The goal is not to overbuild. The goal is to make sure the product works end-to-end: onboarding, pricing, trigger detection, claim generation, fraud check, payout simulation.
 
 ---
 
