@@ -56,15 +56,16 @@ This is a much better fit for gig workers than traditional claims-heavy insuranc
 
 ## How the app works
 
-- The rider signs up in the mobile app and selects their operating zone.
-- Param Setu calculates a weekly risk score using zone-level and disruption-related signals.
-- Based on that score, the rider gets a weekly premium and protection plan.
-- Once the plan is active, the backend keeps monitoring disruption events.
-- If a valid disruption affects the rider’s zone, the system automatically checks eligibility.
-- A fraud layer verifies location and claim consistency.
-- If approved, the claim is created and payout is simulated.
-- The rider sees the reason, status, and protected amount in the app.
-- On the admin side, the system also shows exposure by zone, claims triggered, suspicious cases, and risk trends.
+1. The rider signs up in the mobile app and selects their operating zone.
+2. Param Setu calculates a weekly risk score using zone-level and disruption-related signals.
+3. Based on that score, the rider gets a weekly premium and protection plan.
+4. Once the plan is active, the backend keeps monitoring disruption events.
+5. If a valid disruption affects the rider’s zone, the system automatically checks eligibility.
+6. A fraud layer verifies location and claim consistency.
+7. If approved, the claim is created and payout is simulated.
+8. The rider sees the reason, status, and protected amount in the app.
+
+On the admin side, the system also shows exposure by zone, claims triggered, suspicious cases, and risk trends.
 
 ---
 
@@ -143,7 +144,7 @@ We are not building a vague “claim when something bad happens” system. We ar
 
 Used when rainfall crosses a defined threshold in the rider’s operating zone.
 
-**Sample threshold for the prototype:**
+Sample threshold for the prototype:
 
 - rainfall greater than 80 mm within 6 hours, or
 - rainfall greater than 120 mm within 24 hours
@@ -152,7 +153,7 @@ Used when rainfall crosses a defined threshold in the rider’s operating zone.
 
 Used when road conditions or flood severity make delivery movement impractical.
 
-**Sample threshold for the prototype:**
+Sample threshold for the prototype:
 
 - waterlogging / flood severity flag for the insured zone is marked high, or
 - more than 30% of mapped delivery roads in the zone are marked inaccessible in the disruption feed
@@ -161,7 +162,7 @@ Used when road conditions or flood severity make delivery movement impractical.
 
 Used when temperature or heat index makes sustained outdoor work unsafe.
 
-**Sample threshold for the prototype:**
+Sample threshold for the prototype:
 
 - heat index greater than 45°C, or
 - temperature greater than 40°C for 3 consecutive hours during an active shift window
@@ -170,7 +171,7 @@ Used when temperature or heat index makes sustained outdoor work unsafe.
 
 Used when AQI crosses a severe threshold and prolonged outdoor work becomes risky.
 
-**Sample threshold for the prototype:**
+Sample threshold for the prototype:
 
 - AQI greater than 400 for 3 consecutive hours
 
@@ -178,7 +179,7 @@ Used when AQI crosses a severe threshold and prolonged outdoor work becomes risk
 
 Used when the rider’s area is affected by road closure, zone restriction, curfew, or severe traffic blockage.
 
-**Sample threshold for the prototype:**
+Sample threshold for the prototype:
 
 - official zone closure / restriction / curfew flag = true, or
 - average route mobility in the insured zone drops below the defined disruption threshold for a sustained window
