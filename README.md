@@ -73,23 +73,36 @@ This makes the workflow:
 
 ## Workflow
 
-### Rider side
-1. Rider signs up in the mobile app
-2. Rider selects platform, operating zone, and typical shift window
-3. Param Setu calculates a weekly risk score
-4. Rider is shown a recommended weekly plan
-5. Policy is activated
-6. Rider receives alerts, claim status, and payout visibility in-app
+## Workflow diagram
 
-### System side
-1. External disruption feeds are monitored continuously
-2. Trigger engine checks whether a defined threshold is crossed
-3. Impacted zones are mapped
-4. Eligible active riders are shortlisted
-5. Fraud and consistency checks are applied
-6. Claim is generated automatically
-7. Payout amount is calculated from the active weekly plan
-8. Payout is simulated and reflected in worker/admin dashboards
+```mermaid
+flowchart TD
+    A[Rider signs up in Flutter app] --> B[Select platform zone and shift window]
+    B --> C[Risk engine calculates weekly risk score]
+    C --> D[Recommended weekly plan is generated]
+    D --> E[Policy is activated]
+
+    E --> F[Trigger engine monitors disruption feeds]
+    F --> G{Threshold crossed in insured zone?}
+
+    G -- No --> F
+    G -- Yes --> H[Eligible riders are shortlisted]
+
+    H --> I[Eligibility checks]
+    I --> J[Fraud and anti-spoofing checks]
+    J --> K{Claim confidence level}
+
+    K -- Low risk --> L[Auto-create claim]
+    K -- Medium risk --> M[Soft review]
+    K -- High risk --> N[Admin review]
+
+    L --> O[Calculate payout from active weekly plan]
+    M --> O
+    N --> O
+
+    O --> P[Simulate payout]
+    P --> Q[Update rider dashboard]
+    P --> R[Update admin dashboard]
 
 ---
 
@@ -432,14 +445,36 @@ The admin view can be delivered through a lightweight dashboard.
 - rider activity validation layer
 - simulated delivery platform activity signals
 
-For the prototype, we are not depending on full live Swiggy or Zomato integrations. Rider activity validation is handled using:
-- declared shift windows
-- rider check-in / check-out state
-- zone-matched location pings
-- policy status
-- event window matching
+---
 
-This keeps the system realistic without requiring production platform APIs.
+```markdown
+## High-level architecture
+
+```mermaid
+flowchart LR
+    A[Flutter Mobile App] --> B[FastAPI Backend]
+
+    B --> C[Supabase Auth]
+    B --> D[(Supabase PostgreSQL)]
+    B --> E[Supabase Realtime]
+
+    B --> F[Risk Engine]
+    B --> G[Fraud Engine]
+    B --> H[Trigger Engine]
+    B --> I[Payout Simulation Service]
+
+    H --> J[Weather API]
+    H --> K[AQI API]
+    H --> L[Mobility / Access Disruption Feed]
+
+    G --> M[GPS / Location Validation]
+    G --> N[Device and Network Trust Signals]
+    G --> O[Rider Activity Validation]
+
+    F --> D
+    G --> D
+    H --> D
+    I --> D
 
 ---
 
