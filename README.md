@@ -279,6 +279,101 @@ We are keeping the models explainable. For this use case, interpretable risk and
 
 ---
 
+## Adversarial Defense & Anti-Spoofing Strategy
+
+Param Setu is designed with the assumption that raw GPS can be spoofed. A location ping alone is never treated as proof of presence inside a disruption zone. Instead, the platform uses **multi-signal adversarial validation** to decide whether a claim looks like a genuinely disrupted rider or a coordinated spoofing attempt.
+
+### 1. The Differentiation
+
+The system does not ask only, “Is this rider’s GPS inside the affected zone?”  
+It asks, **“Does this rider’s full behavior look like an actually active delivery partner who got disrupted?”**
+
+To answer that, the fraud layer compares:
+- claimed location
+- recent movement continuity
+- app session activity
+- shift check-in / check-out behavior
+- zone consistency over time
+- event timing consistency
+- device and network trust signals
+- cluster-level coordination patterns across multiple riders
+
+A genuinely stranded rider usually shows a believable pattern: active before the disruption, normal zone history, consistent session behavior, and timing that matches the actual event window.
+
+A spoofing actor usually looks different: sudden location jumps, impossible movement, repeated presence in high-payout zones, weak activity evidence, suspicious device/network patterns, or synchronized claim behavior across many accounts.
+
+### 2. The Data
+
+To detect coordinated fraud, Param Setu looks beyond GPS and analyzes:
+
+**Rider activity signals**
+- declared shift window
+- app check-in / availability state
+- app foreground/background activity near the disruption window
+- session duration before and during the event
+- policy activation timing versus event timing
+- recent operating-zone history
+
+**Movement and spatial consistency signals**
+- route continuity over time
+- impossible travel jumps
+- stationary-at-home patterns while claiming field presence
+- repeated appearances in multiple high-risk zones
+- mismatch between claimed zone and normal operating pattern
+
+**Device and network trust signals**
+- device fingerprint consistency
+- emulator / mock-location risk indicators
+- repeated claims from linked device patterns
+- abnormal IP or network switching during event windows
+- suspicious clustering of accounts across similar devices or networks
+
+**Event-consistency signals**
+- whether the rider was active before the disruption began
+- whether rider availability overlaps the affected shift window
+- whether claim timing matches real external event progression
+- whether rider behavior changes in a believable way during disruption
+
+**Coordinated-ring signals**
+- abnormal claim concentration in the same time window
+- synchronized claim attempts from clustered groups
+- repeated behavioral or device/network similarities across accounts
+- abnormal spikes in new policy activations just before a trigger event
+
+The goal is to detect not just suspicious riders, but suspicious **patterns across riders**.
+
+### 3. The UX Balance
+
+An anti-fraud system should not punish honest workers just because bad weather caused poor connectivity. Param Setu therefore uses a **three-band claim handling model**:
+
+**Low-risk claims**  
+Automatically approved when policy, zone, activity, and fraud signals are consistent.
+
+**Medium-risk claims**  
+Placed into **soft review**, not rejected immediately. The system falls back to:
+- last trusted zone presence
+- recent shift check-in state
+- app session continuity
+- event timing consistency
+- rider confirmation inside the app
+
+This protects honest riders during genuine network drops.
+
+**High-risk claims**  
+Held for admin review when strong spoofing indicators or coordinated fraud patterns are detected.
+
+### Defense principle
+
+The core rule is simple:
+
+> **No single rider-controlled signal should be enough to unlock payout.**
+
+That means GPS alone is not enough, manual declaration alone is not enough, and app-open state alone is not enough. Payout confidence comes from agreement across behavior, time, zone, device, and event consistency.
+
+This makes Param Setu more resilient against both individual spoofers and organized fraud rings without making the product unfair for honest riders.
+
+---
+
 ## Why mobile, not web
 
 We chose a **cross-platform mobile app** because that is where this product actually belongs.
