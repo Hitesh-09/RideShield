@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from db import supabase
+from app.db import supabase
 
 router = APIRouter()
 
@@ -7,6 +7,9 @@ router = APIRouter()
 @router.post("/register")
 def register_user(user: dict):
     response = supabase.table("users").insert(user).execute()
+
+    print(response.data)   # ✅ correct place
+
     return response.data
 
 
