@@ -1,4 +1,4 @@
-# 🚀 Param Setu  
+# Param Setu  
 ### Automated Parametric Insurance for Delivery Workers  
 
 > **Instant payouts. Zero claims. Powered by real-world data.**
@@ -10,7 +10,7 @@
 
 ---
 
-## 🌟 Overview
+## Overview
 
 Param Setu is a **next-generation parametric insurance platform** designed to protect gig and delivery workers from income disruptions caused by environmental risks such as rain, heatwaves, and air pollution.
 
@@ -18,13 +18,13 @@ Unlike traditional insurance systems that rely on manual claim filing and length
 
 ---
 
-## 🎯 Problem Statement
+## Problem Statement
 
 Delivery workers are highly vulnerable to:
 
-- 🌧 Heavy rainfall  
-- 🌡 Extreme heat conditions  
-- 🌫 Poor air quality  
+- Heavy rainfall  
+- Extreme heat conditions  
+- Poor air quality  
 
 These conditions directly impact their daily earnings.
 
@@ -36,7 +36,7 @@ However, existing insurance solutions are:
 
 ---
 
-## 💡 Solution
+## Solution
 
 Param Setu introduces a **fully automated parametric insurance system** where:
 
@@ -46,9 +46,9 @@ Param Setu introduces a **fully automated parametric insurance system** where:
 
 ---
 
-## 🔥 Key Features
+## Key Features
 
-### ⚡ Automated Event Engine
+### Automated Event Engine
 - Continuously monitors real-world conditions  
 - Uses OpenWeather APIs for:
   - Rainfall  
@@ -58,21 +58,21 @@ Param Setu introduces a **fully automated parametric insurance system** where:
 
 ---
 
-### 💰 Instant Parametric Claims
+### Instant Parametric Claims
 - Claims are triggered automatically  
 - Fixed payout per event  
 - No paperwork or delays  
 
 ---
 
-### 🌍 Multi-Trigger Support
-- 🌧 Rain-based triggers  
-- 🌡 Heatwave triggers  
-- 🌫 Pollution (AQI) triggers  
+### Multi-Trigger Support
+- Rain-based triggers  
+- Heatwave triggers  
+- Pollution (AQI) triggers  
 
 ---
 
-### 🧠 AI-Based Premium Calculation
+### AI-Based Premium Calculation
 - Dynamic pricing using a rule-based risk engine  
 - Factors:
   - Rainfall  
@@ -84,14 +84,14 @@ Param Setu introduces a **fully automated parametric insurance system** where:
 
 ---
 
-### 🛡 Fraud Prevention System
+### Fraud Prevention System
 - Prevents duplicate claims  
 - Uses trusted external APIs for validation  
 - Fully automated system eliminates manual manipulation  
 
 ---
 
-### 📱 Rider Dashboard (User App)
+### Rider Dashboard (User App)
 - Simple login/register flow  
 - Displays:
   - Premium  
@@ -101,21 +101,21 @@ Param Setu introduces a **fully automated parametric insurance system** where:
 
 ---
 
-### 🧑‍💼 Admin Dashboard
+### Admin Dashboard
 - Monitor users, policies, and claims  
 - Track system activity  
 - View triggered events and payouts  
 
 ---
 
-## 🧱 System Architecture
+## System Architecture
 
 User → Policy Creation → Risk Engine → Event Engine → Claim Engine → Database
 
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category | Technology |
 |--------|-----------|
@@ -130,7 +130,7 @@ User → Policy Creation → Risk Engine → Event Engine → Claim Engine → D
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 1. User registers on the platform  
 2. Policy is created with **AI-calculated premium**  
@@ -141,7 +141,7 @@ User → Policy Creation → Risk Engine → Event Engine → Claim Engine → D
 
 ---
 
-## 🛡 Policy Logic & Exclusions
+## Policy Logic & Exclusions
 
 - Claims are triggered only when predefined thresholds are met  
 - No duplicate payouts for the same event  
@@ -150,7 +150,7 @@ User → Policy Creation → Risk Engine → Event Engine → Claim Engine → D
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1️⃣ Clone the repository
 
@@ -172,39 +172,42 @@ python3 -m uvicorn app.main:app --reload
 streamlit run frontend/app.py
 ```
 
-📊 Demo Flow
+Demo Flow
 Register a delivery worker
 Create a policy (premium auto-calculated)
 System monitors weather conditions
 Trigger event occurs
 Claim is generated automatically
 Payout is displayed in dashboard
-🏆 Innovation
+
+Innovation
 
 Param Setu transforms insurance from:
-
 Manual & Reactive → Automated & Proactive
 
 By:
-
 Eliminating claim friction
 Enabling instant payouts
 Using real-time environmental data
-🌍 Impact
+
+Impact
+
 Protects gig workers’ income
 Reduces claim processing time
 Improves access to micro-insurance
 Enables scalable, low-cost insurance models
-🔮 Future Enhancements
-📱 Mobile app (Flutter)
-📍 GPS-based validation
-🤖 ML-based risk scoring
-🔔 Real-time alerts & notifications
-🔗 Integration with delivery platforms
-📌 Built With
+
+Future Enhancements
+Mobile app (Flutter)
+GPS-based validation
+ML-based risk scoring
+Real-time alerts & notifications
+Integration with delivery platforms
+
+Built With
 
 FastAPI • Supabase • Streamlit • OpenWeather APIs • AI Risk Engine
 
 👨‍💻 Team Param Setu
 
-Building the future of automated, accessible insurance 🚀
+Building the future of automated, accessible insurance 
