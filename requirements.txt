@@ -1,2 +1,9 @@
+# Frontend (Streamlit Cloud / local)
 streamlit
 supabase
+
+# Backend (Render / FastAPI)
+fastapi
+uvicorn[standard]
+python-dotenv
+requests
